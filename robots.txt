@@ -1,1 +1,4 @@
+User-agent: *
+Allow: /
 
+Sitemap: https://coffee-smile.netlify.app/sitemap.xml
