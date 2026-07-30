@@ -1,212 +1,245 @@
-const products = [
-
-{
-name:"Espresso",
-img:"https://images.unsplash.com/photo-1510707577719-ae7c14805e3a",
-size:"Kichik 15 000 so'm | Katta 20 000 so'm",
-desc:"Kuchli klassik espresso, boy crema bilan."
-},
-
-{
-name:"Americano",
-img:"https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd",
-size:"Kichik 15 000 so'm | Katta 20 000 so'm",
-desc:"Yumshoq ta'mli qora qahva."
-},
-
-{
-name:"Long Black",
-img:"https://images.unsplash.com/photo-1498804103079-a6351b050096",
-size:"20 000 so'm",
-desc:"Kuchli aroma va premium ta'm."
-},
-
-{
-name:"Latte",
-img:"https://www.walkingpalates.com/Images/hot-cappuccino-italian-breakfast-678.jpg",
-size:"Kichik 20 000 so'm | Katta 25 000 so'm",
-desc:"Sut ko'pikli yumshoq latte."
-},
-
-{
-name:"Flat White",
-img:"https://images.unsplash.com/photo-1509042239860-f550ce710b93",
-size:"20 000 so'm",
-desc:"Silliq teksturali qahva."
-},
-
-{
-name:"Caffè Mocha",
-img:"https://www.lofbergs.co.uk/wp-content/uploads/sites/3/2023/03/hot_orange_mocca.jpg",
-size:"Kichik 25 000 so'm | Katta 30 000 so'm",
-desc:"Shokolad va qahva uyg'unligi."
-},
-
-{
-name:"Cappuccino",
-img:"https://images.unsplash.com/photo-1534778101976-62847782c213",
-size:"Kichik 20 000 so'm | Katta 25 000 so'm",
-desc:"Latte art bilan kremli cappuccino."
-},
-
-{
-name:"Raf Coffee",
-img:"https://im.therecepts.com/recipes/1080/n/nd8tyhk_bBo_1080.jpg",
-size:"Kichik 25 000 so'm | Katta 30 000 so'm",
-desc:"Maxsus qaymoqli raf coffee."
-},
-
-{
-name:"Affogato",
-img:"https://tatlerasia.kz/uploads/1GettyImages-2211116873-6a0ac7625739d6.41280285.jpg",
-size:"25 000 so'm",
-desc:"Espresso va muzqaymoqli italyan desert."
-},
-
-{
-name:"Glace",
-img:"https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5",
-size:"Kichik 25 000 so'm | Katta 30 000 so'm",
-desc:"Sovuq va mazali coffee desert."
-},
+let cart = [];
+let total = 0;
 
 
-{
-name:"Hot Chocolate",
-img:"https://images.unsplash.com/photo-1517578239113-b03992dcdd25",
-size:"Kichik 20 000 so'm | Katta 25 000 so'm",
-desc:"Issiq shokoladli ichimlik."
-},
+// Savatchaga qo'shish
+
+function addCart(product){
+
+cart.push({
+name: product,
+price: getPrice(product)
+});
 
 
-{
-name:"Ice Coffee",
-img:"https://images.unsplash.com/photo-1517701604599-bb29b565090c",
-size:"Kichik 17 000 so'm | Katta 23 000 so'm",
-desc:"Muzli sovuq qahva."
-},
+updateCart();
 
 
-{
-name:"Ice Coffee with Milk",
-img:"https://images.unsplash.com/photo-1461023058943-07fcbe16d735",
-size:"Kichik 25 000 so'm | Katta 30 000 so'm",
-desc:"Sutli muzli qahva."
-},
+alert(product + " savatchaga qo'shildi ☕");
 
-
-{
-name:"Frappuccino",
-img:"https://images.unsplash.com/photo-1572490122747-3968b75cc699",
-size:"30 000 so'm",
-desc:"Kremli sovuq premium coffee."
-},
-
-
-{
-name:"Mojito",
-img:"https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd",
-size:"Kichik 15 000 so'm | Katta 20 000 so'm",
-desc:"Yalpiz va limonli mojito."
-},
-
-
-{
-name:"Smoothie",
-img:"https://images.unsplash.com/photo-1553530666-ba11a7da3888",
-size:"Kichik 20 000 so'm | Katta 25 000 so'm",
-desc:"Mevali yangi smoothie."
-},
-
-
-{
-name:"Cocktail",
-img:"https://www.barlist.app/wp-content/uploads/2026/04/Pina-Colada-From-Local-Recipe-to-National-Identity-in-Puerto-Rico.webp",
-size:"Kichik 15 000 so'm | Katta 20 000 so'm",
-desc:"Maxsus tayyorlangan cocktail."
-},
-
-
-{
-name:"Fruit Tea",
-img:"https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9",
-size:"25 000 so'm",
-desc:"Mevali issiq choy."
-},
-
-
-{
-name:"Ginger Tea",
-img:"https://images.unsplash.com/photo-1576092768241-dec231879fc3",
-size:"20 000 so'm",
-desc:"Zanjabilli foydali choy."
-},
-
-
-{
-name:"Red Tea",
-img: "https://xn--80abmmk8a7c.xn--p1ai/wa-data/public/blog/img/post-160-original.jpg",
-size:"20 000 so'm",
-desc:"Klassik qizil choy."
-},
-
-
-{
-name:"Saffron Tea",
-img:"https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9",
-size:"20 000 so'm",
-desc:"Za'faronli premium choy."
-},
-
-
-{
-name:"Sea Buckthorn Tea",
-img:"https://images.unsplash.com/photo-1597318181409-cf64d0b5d8a2",
-size:"30 000 so'm",
-desc:"Vitaminli maxsus choy."
-},
-
-
-{
-name:"Teapot Tea",
-img:"https://images.unsplash.com/photo-1563822249366-3efb23b8e0c8",
-size:"40 000 so'm",
-desc:"Katta choynakdagi premium choy."
 }
 
-];
+
+
+// Narx olish
+
+function getPrice(product){
+
+let prices={
+
+"Cappuccino":20000,
+"Americano":15000,
+"Espresso":15000,
+"Latte":20000,
+"Mocha":25000,
+"Iced Coffee":17000,
+"Mojito":15000
+
+};
+
+
+return prices[product] || 0;
+
+}
 
 
 
-const box=document.querySelector(".products");
+
+// Savatchani yangilash
+
+function updateCart(){
+
+let box=document.getElementById("cart-items");
+
+box.innerHTML="";
+
+total=0;
 
 
-products.forEach(product=>{
+cart.forEach((item,index)=>{
 
 
-box.innerHTML += `
+total+=item.price;
 
-<div class="card">
 
-<img src="${product.img}">
+let p=document.createElement("p");
 
-<h2>${product.name}</h2>
 
-<p>⭐ 4.9</p>
+p.innerHTML=
+`
+${item.name} 
+${item.price.toLocaleString()} so'm
 
-<p>${product.desc}</p>
-
-<strong>${product.size}</strong>
-
-<br><br>
-
-<button>
-Buyurtma berish
+<button onclick="removeCart(${index})">
+❌
 </button>
-
-</div>
-
 `;
+
+
+box.appendChild(p);
+
+
+});
+
+
+document.querySelector("#cart h4").innerHTML=
+
+"Jami: "+total.toLocaleString()+" so'm";
+
+
+
+if(cart.length===0){
+
+box.innerHTML="Bo'sh";
+
+}
+
+
+}
+
+
+
+
+// O'chirish
+
+function removeCart(index){
+
+cart.splice(index,1);
+
+updateCart();
+
+}
+
+
+
+
+
+// Buyurtma berish
+
+document.querySelectorAll(".gold-btn")
+.forEach(button=>{
+
+
+button.addEventListener("click",()=>{
+
+
+let message=
+
+"Assalomu alaykum Coffee Smile. " +
+
+"Buyurtma bermoqchiman.";
+
+
+
+let url=
+
+"https://t.me/barista_muhammadali?text="
+
++encodeURIComponent(message);
+
+
+
+window.open(url,"_blank");
+
+
+});
+
+
+});
+
+
+
+
+
+
+// Scroll animatsiya
+
+
+const observer = new IntersectionObserver(
+
+(entries)=>{
+
+
+entries.forEach(entry=>{
+
+
+if(entry.isIntersecting){
+
+
+entry.target.style.opacity="1";
+
+entry.target.style.transform=
+"translateY(0)";
+
+
+}
+
+
+});
+
+
+}
+
+);
+
+
+
+
+document.querySelectorAll(
+".product, section"
+)
+.forEach(el=>{
+
+
+el.style.opacity="0";
+
+el.style.transform=
+"translateY(40px)";
+
+el.style.transition=
+"1s";
+
+
+observer.observe(el);
+
+
+});
+
+
+
+
+
+// Navbar smooth scroll
+
+document.querySelectorAll("nav a")
+.forEach(link=>{
+
+
+link.addEventListener("click",(e)=>{
+
+
+let target=
+document.querySelector(
+link.getAttribute("href")
+);
+
+
+if(target){
+
+e.preventDefault();
+
+
+target.scrollIntoView({
+
+behavior:"smooth"
+
+});
+
+
+}
+
+
+});
 
 
 });
