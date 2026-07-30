@@ -3,20 +3,23 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="google-site-verification" content="u8ZCdwq3f2QlVLGfsAd2_x7qENlJd-9hriNVj0fESUM" >
+<meta name="google-site-verification" content="u8ZCdwq3f2QlVLGfsAd2_x7qENlJd-9hriNVj0fESUM">
 
-<title>Coffee Smile | Premium Coffee</title>
+<title>Coffee Smile | Premium Coffee Romitan</title>
+
+<meta name="description" content="Coffee Smile - Premium coffee, mojito va bepul delivery. Romitan tumani, Buxoro viloyati.">
 
 <link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
 </head>
 
+
 <body>
+
 
 <header>
 
@@ -28,7 +31,8 @@
 <a href="#home">Bosh sahifa</a>
 <a href="#menu">Menu</a>
 <a href="#about">Biz haqimizda</a>
-<a href="#contact">Bog'lanish</a>
+<a href="#contact">Aloqa</a>
+<a href="#cart">🛒 Savat</a>
 </nav>
 
 </header>
@@ -39,27 +43,29 @@
 
 <div class="hero-content">
 
+<p class="premium">
+PREMIUM COFFEE EXPERIENCE
+</p>
+
 <h1>
-Coffee Smile
+Coffee
+<br>
+<span>Smile</span>
 </h1>
 
-<h2>
-Premium Coffee • Mojito • Fast Delivery
-</h2>
-
 <p>
-Romitan tumanidagi premium coffee shop
+Premium Coffee • Mojito • Fast Delivery
 </p>
 
 
-<a href="#menu" class="btn">
-Menu ko'rish
-</a>
-
-
-<a href="#contact" class="btn gold">
+<button class="gold-btn">
 Buyurtma berish
-</a>
+</button>
+
+
+<button class="dark-btn">
+Menu ko'rish
+</button>
 
 
 </div>
@@ -69,27 +75,18 @@ Buyurtma berish
 
 
 
+
 <section id="menu">
 
-<h1 class="title">
-Bizning Menu
-</h1>
+
+<h2>Premium Menu</h2>
 
 
 <div class="categories">
 
-<button>
-☕ Coffee
-</button>
-
-<button>
-🍹 Cold Drinks
-</button>
-
-<button>
-🍵 Tea
-</button>
-
+<button>Coffee ☕</button>
+<button>Cold Drinks 🍹</button>
+<button>Tea 🍵</button>
 
 </div>
 
@@ -98,10 +95,207 @@ Bizning Menu
 <div class="products">
 
 
-<!-- JavaScript orqali mahsulotlar chiqadi -->
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d">
+
+<h3>Cappuccino</h3>
+
+<p>Creamy milk foam, latte art</p>
+
+<span>⭐ 4.9</span>
+
+<select>
+<option>Kichik - 20 000 so'm</option>
+<option>Katta - 25 000 so'm</option>
+</select>
+
+<button onclick="addCart('Cappuccino')">
+Savatga
+</button>
+
+</div>
+
+
+
+
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93">
+
+<h3>Americano</h3>
+
+<p>Classic black coffee</p>
+
+<span>⭐ 4.9</span>
+
+<select>
+<option>Kichik - 15 000 so'm</option>
+<option>Katta - 20 000 so'm</option>
+</select>
+
+<button onclick="addCart('Americano')">
+Savatga
+</button>
+
+</div>
+
+
+
+
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1510707577719-ae7c14805e3a">
+
+<h3>Espresso</h3>
+
+<p>Strong Italian coffee</p>
+
+<span>⭐ 4.9</span>
+
+<select>
+<option>15 000 so'm</option>
+</select>
+
+
+<button onclick="addCart('Espresso')">
+Savatga
+</button>
+
+</div>
+
+
+
+
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735">
+
+<h3>Latte</h3>
+
+<p>Soft milk texture</p>
+
+<span>⭐ 4.9</span>
+
+
+<select>
+<option>Kichik - 20 000 so'm</option>
+<option>Katta - 25 000 so'm</option>
+</select>
+
+
+<button onclick="addCart('Latte')">
+Savatga
+</button>
+
+</div>
+
+
+
+
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1578374173705-0e9c7c3f1e3a">
+
+<h3>Mocha</h3>
+
+<p>Coffee with chocolate</p>
+
+<span>⭐ 4.9</span>
+
+
+<select>
+<option>Kichik - 25 000 so'm</option>
+<option>Katta - 30 000 so'm</option>
+</select>
+
+
+<button onclick="addCart('Mocha')">
+Savatga
+</button>
 
 
 </div>
+
+
+
+
+
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c">
+
+<h3>Iced Coffee</h3>
+
+<p>Cold premium coffee</p>
+
+<span>⭐ 4.9</span>
+
+
+<select>
+<option>Kichik - 17 000 so'm</option>
+<option>Katta - 23 000 so'm</option>
+</select>
+
+
+<button onclick="addCart('Iced Coffee')">
+Savatga
+</button>
+
+
+</div>
+
+
+
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc">
+
+<h3>Mojito</h3>
+
+<p>Fresh cold drink</p>
+
+<span>⭐ 4.9</span>
+
+
+<select>
+<option>Kichik - 15 000 so'm</option>
+<option>Katta - 20 000 so'm</option>
+</select>
+
+
+<button onclick="addCart('Mojito')">
+Savatga
+</button>
+
+</div>
+
+
+
+
+</div>
+
+</section>
+
+
+
+
+
+<section class="delivery">
+
+
+<h2>🚚 Free Delivery</h2>
+
+<p>
+Faqat Romitan tumani, Buxoro viloyati
+</p>
 
 
 </section>
@@ -111,156 +305,81 @@ Bizning Menu
 
 
 
-<section id="about" class="about">
+<section id="about">
 
 
-<div class="about-text">
-
-
-<h1>
-Coffee Smile haqida
-</h1>
+<h2>Biz haqimizda</h2>
 
 
 <p>
+Coffee Smile — premium coffee va zamonaviy xizmat markazi.
+Biz mijozlarimizga sifatli ichimliklar va unutilmas ta'm tajribasini beramiz.
+</p>
 
-Coffee Smile — Buxoro viloyati,
-Romitan tumanidagi premium coffee brend.
 
+</section>
+
+
+
+
+
+
+
+<section id="contact">
+
+
+<h2>Contact & Order</h2>
+
+
+<p>
+📞 <a href="tel:+998877639977">
++998 87-763-99-77
+</a>
 </p>
 
 
 <p>
-
-Biz professional baristalar tomonidan
-tayyorlangan sifatli qahva, mojito,
-choy va sovuq ichimliklarni taklif qilamiz.
-
+📱 Instagram: @barista_muhammadali
 </p>
 
 
-<div class="features">
-
-
-<div>
-☕
-<h3>
-Premium Coffee
-</h3>
-</div>
-
-
-<div>
-🚚
-<h3>
-Free Delivery
-</h3>
-</div>
-
-
-<div>
-⭐
-<h3>
-Quality Service
-</h3>
-</div>
-
-
-</div>
-
-
-</div>
+<p>
+✈️ Telegram: @barista_muhammadali
+</p>
 
 
 
-<div class="about-image">
-
-<img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24">
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-<section id="contact" class="contact">
-
-
-<h1>
-Contact & Order
-</h1>
-
-
-<div class="contact-box">
-
-
-<div>
-
-<h3>
-📞 Telefon
-</h3>
-
-<a href="tel:+998877639977">
-+998 87 763 99 77
-</a>
-
-
-</div>
-
-
-
-<div>
-
-<h3>
-✈️ Telegram
-</h3>
-
-<a href="https://t.me/barista_muhammadali">
-@barista_muhammadali
-</a>
-
-</div>
-
-
-
-
-<div>
-
-<h3>
-📱 Instagram
-</h3>
-
-<a href="https://instagram.com/barista_muhammadali">
-@barista_muhammadali
-</a>
-
-
-</div>
-
-
-
-</div>
-
-
-
-<div class="delivery">
-
-🚚 Free Delivery in Romitan
-
-<br>
-
-📍 Buxoro viloyati, Romitan tumani
-
-</div>
+<button class="gold-btn">
+Buyurtma berish
+</button>
 
 
 
 </section>
+
+
+
+
+
+
+
+
+<div id="cart">
+
+
+<h3>🛒 Savatcha</h3>
+
+<div id="cart-items">
+Bo'sh
+</div>
+
+
+<h4>
+Jami: 0 so'm
+</h4>
+
+
+</div>
 
 
 
@@ -270,13 +389,13 @@ Contact & Order
 <footer>
 
 
-<h2>
+<h3>
 ☕ Coffee Smile
-</h2>
+</h3>
 
 
 <p>
-Romitan District • Bukhara Region
+Romitan District, Bukhara Region
 </p>
 
 
@@ -286,6 +405,8 @@ Free Delivery
 
 
 </footer>
+
+
 
 
 
